@@ -1,15 +1,11 @@
 # Node.js
 node_modules/
-
 # Logs
 logs
 *.log
-
 # Dependencias generadas automáticamente
 npm-debug.log*
-
 # Directorio de construcción
 /build/
-
 # Archivos de configuración locales
 .env
