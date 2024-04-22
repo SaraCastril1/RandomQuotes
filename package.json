@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "name": "randomquotes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraCastril1/RandomQuotes.git"
+  },
+  "author": "Sara Castrillón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaraCastril1/RandomQuotes/issues"
+  },
+  "homepage": "https://github.com/SaraCastril1/RandomQuotes#readme",
+  "description": ""
+}
