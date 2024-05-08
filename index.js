@@ -1,23 +1,21 @@
-const express = require('express')
-const os = require("os")
-const app = express()
-const port = 80
+const express = require('express');
+const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 
-const phrases = [
-    "Get ready to be inspired…",
-    "See rejection as redirection.",
-    "There is beauty in simplicity.",
-    "You can’t be late until you show up.",
-    "Maybe life is testing you. Don’t give up.",
-    "Impossible is just an opinion.",
-    "Alone or not you gonna walk forward.",
-]
+const { PORT } = process.env;
 
-app.get('/', (req, res) => {
-    const number = Math.floor(Math.random() * 7);
-    res.send(phrases[number]+" - Container Id: "+ os.hostname())
-})
+const app = express();
+const router = require("./router");
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.use(cors({
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  }));
+
+app.use(router);
+
+
+app.listen( PORT, () => {
+    console.log(`Example app listening on port ${ PORT }`)
 })
